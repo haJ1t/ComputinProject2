@@ -18,17 +18,40 @@
                 <li><a href="plants.html" class="active">Plants Collection</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
     </header>
 
     <section class="plants-section">
-        <h2>My Plant Collection</h2>
-        <input type="file" id="fileInput" accept="image/*">
-        <button onclick="identifyPlant()">Identify</button>
-        <p id="plantResult"></p>
+        <h2>PLANTS COLLECTION</h2>
+        <div class="carousel">
+            <button id="prev" class="carousel-btn">←</button>
+            <div class="carousel-track">
+                <div class="plant-card">
+                    <img src="plant1.png" alt="Plant 1">
+                </div>
+                <div class="plant-card">
+                    <img src="plant2.png" alt="Plant 2">
+                </div>
+                <div class="plant-card">
+                    <img src="plant3.png" alt="Plant 3">
+                </div>
+            </div>
+            <button id="next" class="carousel-btn">→</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 PlantMama. All rights reserved.</p>
     </footer>
+
+    <script src="carousel.js"></script>
 </body>
 </html>
