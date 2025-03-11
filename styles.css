@@ -1,4 +1,8 @@
-/* General Styles */
+/* styles.css */
+
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,115 +11,152 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
-    background: linear-gradient(135deg, #4CAF50, #2E7D32);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
     font-weight: bold;
+    color: #2E7D32;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    background: #388E3C;
-    margin: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
     font-size: 18px;
-    padding: 12px 20px;
-    transition: 0.3s;
-    display: inline-block;
+    color: black;
+    font-weight: 500;
+    padding: 10px;
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+nav ul li a.active {
+    font-weight: bold;
 }
 
-/* Sections */
-.section {
-    padding: 40px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 900px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.search-bar input {
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    outline: none;
+    width: 150px;
+    background: transparent;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
+    background: url('homepage.png') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h2 {
+.hero h1 {
+    font-size: 100px;
+    font-weight: bold;
     color: #2E7D32;
+}
+
+.hero h2 {
+    font-size: 32px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Buttons */
-button {
-    padding: 12px 20px;
-    margin-top: 15px;
-    background: #4CAF50;
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Chat Button */
+.chat-btn {
+    background: black;
     color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
-button:hover {
-    background: #2E7D32;
-}
-
-/* Chatbox */
-.chatbox {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: auto;
-    background: #ffffff;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-#chatMessages {
-    height: 250px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: #f9f9f9;
-    border-radius: 8px;
-}
-
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+.chat-btn:hover {
+    background: #444;
 }
 
 /* Footer */
 footer {
-    background: #4CAF50;
+    background: #2E7D32;
     color: white;
-    padding: 15px;
     text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
+    padding: 20px;
+    font-size: 16px;
     font-weight: bold;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .chat-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
 }

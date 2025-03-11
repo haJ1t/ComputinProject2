@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlantMama - Plant Collection</title>
+    <title>PlantMama - Plants Collection</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>PlantMama</h1>
+        <div class="logo">PlantMama.</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chat.html">Chat</a></li>
                 <li><a href="rewards.html">Rewards</a></li>
-                <li><a href="plants.html">Plant Collection</a></li>
+                <li><a href="plants.html" class="active">Plants Collection</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="plants" class="section">
-        <h2>Plant Collection</h2>
-        <p>Track and manage your plants here.</p>
+    <section class="plants-section">
+        <h2>My Plant Collection</h2>
         <input type="file" id="fileInput" accept="image/*">
         <button onclick="identifyPlant()">Identify</button>
         <p id="plantResult"></p>

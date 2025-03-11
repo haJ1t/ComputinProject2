@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlantMama - Home</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
 </head>
 <body>
     <header>
-        <h1>PlantMama</h1>
+        <div class="logo">PlantMama.</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="chat.html">Chat</a></li>
                 <li><a href="rewards.html">Rewards</a></li>
-                <li><a href="plants.html">Plant Collection</a></li>
+                <li><a href="plants.html">Plants Collection</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
     </header>
 
-    <section id="home" class="section">
-        <h2>Welcome to PlantMama</h2>
-        <p>Your AI-powered plant care assistant.</p>
+    <section class="hero">
+        <h1>PlantMama</h1>
+        <h2>PLANTING SOLVED</h2>
+        <p>A tool that helps grow your plants faster and healthier. 
+        With no missed days and headache. Our tools allow you to identify plants effortlessly and find the best solutions.</p>
+        <button class="chat-btn" onclick="window.location.href='chat.html'">Start chatting</button>
     </section>
 
     <footer>
