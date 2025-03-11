@@ -77,9 +77,9 @@ nav ul li a.active {
 }
 
 /* Hero Section */
-.hero {
+.hero { 
     text-align: center;
-    background: url('homepage.png') no-repeat center center/cover;
+    background: url('homepage.jpg') no-repeat center center/cover;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -91,19 +91,20 @@ nav ul li a.active {
     font-size: 100px;
     font-weight: bold;
     color: #2E7D32;
+    margin-bottom: 10px;
 }
 
 .hero h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .hero p {
-    max-width: 600px;
+    max-width: 500px;
     font-size: 18px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Chat Button */
@@ -116,6 +117,7 @@ nav ul li a.active {
     border: none;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    margin-bottom: 230px;
 }
 
 .chat-btn:hover {
@@ -149,6 +151,7 @@ nav ul li a.active {
 .carousel-track {
     display: flex;
     transition: transform 0.4s ease-in-out;
+    width: 300%; /* Ensures all images fit */
 }
 
 .plant-card {
@@ -165,12 +168,100 @@ nav ul li a.active {
     object-fit: contain;
 }
 
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Dots */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #2E7D32;
+}
 /* Rewards Page */
 .rewards-section {
     text-align: center;
     padding: 40px;
     background: url('rewards.png') no-repeat center center/cover;
     height: auto;
+}
+
+.rewards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.reward-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.reward-card:hover {
+    transform: scale(1.05);
+}
+
+.reward-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* This ensures images are the same size */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.reward-info {
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.reward-info h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.reward-info p {
+    font-size: 14px;
+    margin: 0;
 }
 
 /* Chat Page */
@@ -279,7 +370,7 @@ footer {
     padding: 20px;
     font-size: 16px;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 5px;
 }
 
 /* Responsive Design */
