@@ -242,12 +242,76 @@ input[type="text"] {
 .rewards-section {
     text-align: center;
     padding: 40px;
+    background: url('rewards.png') no-repeat center center/cover;
+    height: auto;
 }
 
-/* About Page */
-.about-section {
-    text-align: center;
-    padding: 40px;
+.rewards-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.rewards-section p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.update-text {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Rewards Container */
+.rewards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.reward-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reward-card:hover {
+    transform: scale(1.05);
+}
+
+.reward-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.reward-info {
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.reward-info h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.reward-info p {
+    font-size: 14px;
+    margin: 0;
 }
 
 /* Footer */
