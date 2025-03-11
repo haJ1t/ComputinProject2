@@ -1,5 +1,4 @@
 /* chatbot.js */
-
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Chatbot script loaded successfully.");
 });

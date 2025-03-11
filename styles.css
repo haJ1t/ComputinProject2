@@ -165,79 +165,6 @@ nav ul li a.active {
     object-fit: contain;
 }
 
-/* Carousel Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-#prev {
-    left: 10px;
-}
-
-#next {
-    right: 10px;
-}
-
-/* Dots */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background: gray;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #2E7D32;
-}
-
-/* Chat Section */
-.chat-section {
-    text-align: center;
-    padding: 40px;
-}
-
-.chatbox {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: auto;
-    background: #ffffff;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-#chatMessages {
-    height: 250px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: #f9f9f9;
-    border-radius: 8px;
-}
-
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-}
-
 /* Rewards Page */
 .rewards-section {
     text-align: center;
@@ -246,72 +173,102 @@ input[type="text"] {
     height: auto;
 }
 
-.rewards-section h2 {
-    font-size: 36px;
+/* Chat Page */
+.chat-section {
+    text-align: center;
+    padding: 40px;
+    background: url('chat-bg.png') no-repeat center center/cover;
+    height: auto;
+}
+
+/* Chat Header */
+.chat-header {
+    background: black;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
     font-weight: bold;
-    color: #2E7D32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    max-width: 800px;
+    margin: auto;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chatbox */
+.chatbox {
+    background: white;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#chatMessages {
+    min-height: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.rewards-section p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #333;
-}
-
-.update-text {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #666;
-}
-
-/* Rewards Container */
-.rewards-container {
+/* Chat Options */
+.chat-options {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
-.reward-card {
-    background: white;
+.chat-option {
+    background: #ddd;
+    border: none;
+    padding: 10px 15px;
     border-radius: 20px;
-    overflow: hidden;
-    width: 300px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-}
-
-.reward-card:hover {
-    transform: scale(1.05);
-}
-
-.reward-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.reward-info {
-    background: black;
-    color: white;
-    padding: 20px;
-    text-align: left;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.reward-info h3 {
-    font-size: 20px;
-    margin: 0 0 10px;
-}
-
-.reward-info p {
     font-size: 14px;
-    margin: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chat-option:hover {
+    background: #bbb;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    align-items: center;
+    background: #e8e8e8;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.chat-input button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -357,5 +314,9 @@ footer {
     .plant-card img {
         width: 180px;
         height: 180px;
+    }
+
+    .chatbox {
+        max-width: 95%;
     }
 }

@@ -16,16 +16,34 @@
                 <li><a href="chat.html" class="active">Chat</a></li>
                 <li><a href="rewards.html">Rewards</a></li>
                 <li><a href="plants.html">Plants Collection</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
     </header>
 
     <section class="chat-section">
-        <h2>Chat with our AI</h2>
+        <div class="chat-header">
+            <span>Chat with PlantMama.</span>
+            <button class="close-chat">✖</button>
+        </div>
+
         <div class="chatbox">
             <div id="chatMessages"></div>
-            <input type="text" id="userInput" placeholder="Ask about plant care...">
-            <button onclick="sendMessage()">Send</button>
+
+            <div class="chat-options">
+                <button class="chat-option">📄 Chat Files</button>
+                <button class="chat-option">🔍 Look up collection</button>
+                <button class="chat-option">🏆 My rewards</button>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask me anything.....">
+                <button onclick="sendMessage()">⬆️</button>
+            </div>
         </div>
     </section>
 
