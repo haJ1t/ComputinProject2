@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlantMama - Plants Collection</title>
+    <title>Plant Details</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="plants.js"></script>
+    <script defer src="plant-details.js"></script>
 </head>
 <body>
     <header>
@@ -16,19 +16,21 @@
                 <li><a href="chat.html">Chat</a></li>
                 <li><a href="rewards.html">Rewards</a></li>
                 <li><a href="plants.html" class="active">Plants Collection</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" id="searchBox" placeholder="Search plants...">
-            <button onclick="searchPlants()">🔍</button>
-        </div>
     </header>
 
-    <section class="plants-section">
-        <h2>PLANTS COLLECTION</h2>
-        <div class="plants-grid" id="plantsGrid">
-            <!-- Plants will be loaded here dynamically -->
-        </div>
+    <section class="plant-details">
+        <img id="plant-image" src="" alt="">
+        <h1 id="plant-name"></h1>
+        <h2 id="scientific-name"></h2>
+        <p id="plant-description"></p>
+        <ul>
+            <li><strong>Watering:</strong> <span id="plant-watering"></span></li>
+            <li><strong>Sunlight:</strong> <span id="plant-sunlight"></span></li>
+            <li><strong>Care Level:</strong> <span id="plant-care"></span></li>
+        </ul>
     </section>
 
     <footer>

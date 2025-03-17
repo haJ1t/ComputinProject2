@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Aloe Vera",
+        "scientific_name": "Aloe barbadensis",
+        "watering": "Once every 3 weeks",
+        "sunlight": "Indirect sunlight",
+        "care_level": "Easy",
+        "description": "Aloe Vera is a succulent plant species that is great for skin care.",
+        "image": "1.png"
+    },
+    {
+        "id": 2,
+        "name": "Monstera",
+        "scientific_name": "Monstera deliciosa",
+        "watering": "Every 1-2 weeks",
+        "sunlight": "Bright, indirect light",
+        "care_level": "Medium",
+        "description": "Monstera is known for its large, beautiful split leaves.",
+        "image": "2.png"
+    },
+    {
+        "id": 3,
+        "name": "Snake Plant",
+        "scientific_name": "Sansevieria trifasciata",
+        "watering": "Once a month",
+        "sunlight": "Low to bright, indirect light",
+        "care_level": "Easy",
+        "description": "Snake Plants are one of the easiest houseplants to take care of.",
+        "image": "3.png"
+    }
+]
