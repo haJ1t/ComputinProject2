@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlantMama - Growth Journal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="journal.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">PlantMama.</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="plants.html">Plants Collection</a></li>
+        <li><a href="reminders.html">Reminders</a></li>
+        <li><a href="journal.html" class="active">Journal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="journal-section">
+    <h2>Growth Journal</h2>
+
+    <form id="journalForm">
+      <label for="plantSelect">Select Plant:</label>
+      <select id="plantSelect" required>
+        <option value="">-- Choose a plant --</option>
+        <option value="Aloe Vera">Aloe Vera</option>
+        <option value="Monstera">Monstera</option>
+        <option value="Snake Plant">Snake Plant</option>
+      </select>
+
+      <label for="logDate">Date:</label>
+      <input type="date" id="logDate" required />
+
+      <label for="notes">Notes:</label>
+      <textarea id="notes" rows="4" placeholder="Write something about your plant..."></textarea>
+
+      <label for="photo">Upload Photo (optional):</label>
+      <input type="file" id="photo" accept="image/*" />
+
+      <button type="submit">Add Entry</button>
+    </form>
+
+    <h3>Your Logs</h3>
+    <div id="logList"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PlantMama. All rights reserved.</p>
+  </footer>
+</body>
+</html>
