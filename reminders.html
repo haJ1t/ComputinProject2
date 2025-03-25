@@ -9,7 +9,9 @@
 </head>
 <body>
   <header>
-    <div class="logo">PlantMama.</div>
+    <div class="logo">
+        <a href="index.html">PlantMama.</a>
+      </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -52,3 +54,13 @@
   </footer>
 </body>
 </html>
+<script>
+    const links = document.querySelectorAll("nav a");
+    const current = window.location.pathname.split("/").pop();
+  
+    links.forEach(link => {
+      if (link.getAttribute("href") === current) {
+        link.classList.add("active");
+      }
+    });
+  </script>
