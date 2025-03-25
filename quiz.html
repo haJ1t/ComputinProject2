@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlantMama - Care Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="quiz.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">PlantMama.</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="plants.html">Plants Collection</a></li>
+        <li><a href="reminders.html">Reminders</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+        <li><a href="weather.html">Weather Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="quiz-section">
+    <h2>Plant Care Recommendation Quiz</h2>
+    <form id="quizForm">
+      <label>How much light does your home get?</label>
+      <select required id="light">
+        <option value="">Choose...</option>
+        <option value="low">Low light</option>
+        <option value="medium">Medium light</option>
+        <option value="high">Bright/Direct sunlight</option>
+      </select>
+
+      <label>How often can you water your plant?</label>
+      <select required id="water">
+        <option value="">Choose...</option>
+        <option value="rarely">Once every 2+ weeks</option>
+        <option value="weekly">About once a week</option>
+        <option value="often">Every few days</option>
+      </select>
+
+      <label>Do you have pets?</label>
+      <select required id="pets">
+        <option value="">Choose...</option>
+        <option value="yes">Yes, I need pet-safe plants</option>
+        <option value="no">No pets</option>
+      </select>
+
+      <label>What's your plant care experience?</label>
+      <select required id="experience">
+        <option value="">Choose...</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="expert">Expert</option>
+      </select>
+
+      <button type="submit">Get My Plant Match</button>
+    </form>
+
+    <div id="quizResult"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PlantMama. All rights reserved.</p>
+  </footer>
+</body>
+</html>
