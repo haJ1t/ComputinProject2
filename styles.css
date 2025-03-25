@@ -1,75 +1,104 @@
-/* styles.css */
-
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* Global Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f4f8;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Utility Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #2E7D32;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2E7D32;
+  margin: 5px 0;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 5px 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    font-weight: 500;
-    padding: 10px;
-    transition: 0.3s;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: 0.3s;
 }
 
 nav ul li a.active {
-    font-weight: bold;
+  font-weight: bold;
+  color: #2E7D32;
+  background-color: #e0f2f1;
+  border-radius: 8px;
 }
 
 /* Search Bar */
 .search-bar {
-    display: flex;
-    align-items: center;
-    background: #eee;
-    padding: 5px;
-    border-radius: 20px;
-    width: 250px;
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 5px;
+  border-radius: 20px;
+  width: 200px;
+  max-width: 100%;
+  margin-top: 10px;
 }
 
 .search-bar input {
-    border: none;
-    padding: 8px;
-    border-radius: 20px;
-    outline: none;
-    width: 100%;
-    background: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 20px;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  font-size: 14px;
 }
 
+/* Responsive Header Fix */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 /* Hero Section */
 .hero { 
     text-align: center;
@@ -667,7 +696,7 @@ footer {
       padding: 12px 24px;
     }
   }
-.weather-section {
+  .weather-section {
     max-width: 700px;
     margin: auto;
     padding: 40px;
